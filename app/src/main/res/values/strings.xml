@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">BlocCompass</string>
+
+    //Button text strings
+    <string name="create_map_button_text">Create Map</string>
+    <string name="list_maps_button_text">Maps</string>
+    <string name="map_search_button_text">Search</string>
+
+    <string name="cancel_navigation_button_text">Cancel</string>
+    <string name="neutral_navigation_button_text">Huh?</string>
+    <string name="positive_navigation_button_text">Yes</string>
+    <string name="negative_navigation_button_text">No</string>
+
+    //Message strings
+    <string name="download_complete_message">Download Complete</string>
+    <string name="no_maps_message">No Maps Dude...</string>
+    <string name="name_map_hint">Name This Map</string>
+    <string name="map_deleted_message">Map Deleted</string>
+    <string name="map_needs_name_message">This Map Needs A Name Dude</string>
+    <string name="create_map_name_message">Create-A-Map</string>
+    <string name="create_map_dialog_message">Select Yes To Create A Map From Your Current View</string>
+
+    //Utility strings
+    <string name="default_region_name">Name Not Found</string>
 </resources>
