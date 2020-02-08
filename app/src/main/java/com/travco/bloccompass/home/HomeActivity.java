@@ -461,9 +461,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         Toast.makeText(HomeActivity.this, message, Toast.LENGTH_LONG).show();
     }
 
-    public void enableLocationComponent(Style mapStyle) {
-        // Get an instance of the component
-        LocationComponent locationComponent = map.getLocationComponent();
+    private void enableLocationComponent(Style mapStyle) {
+        // Check if permissions are enabled and if not request
+        if (PermissionsManager.areLocationPermissionsGranted(this)) {
+            // Get an instance of the component
+            LocationComponent locationComponent = map.getLocationComponent();
 
         // Activate with options
         locationComponent.activateLocationComponent(
@@ -477,6 +479,11 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // Set the component's render mode
         locationComponent.setRenderMode(RenderMode.COMPASS);
+        }
+        else {
+            permissionsManager = new PermissionsManager(this);
+            permissionsManager.requestLocationPermissions(this);
+        }
     }
 
     @Override
