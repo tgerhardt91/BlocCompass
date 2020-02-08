@@ -1,4 +1,4 @@
-package com.example.bloccompass.main;
+package com.travco.bloccompass.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,7 +39,7 @@ import com.mapbox.mapboxsdk.plugins.places.autocomplete.PlaceAutocomplete;
 import com.mapbox.mapboxsdk.plugins.places.autocomplete.model.PlaceOptions;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 
-import com.example.bloccompass.timberTrees.NotLoggingTree;
+import com.travco.bloccompass.timberTrees.NotLoggingTree;
 
 import org.json.JSONObject;
 
