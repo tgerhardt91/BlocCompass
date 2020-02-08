@@ -7,9 +7,13 @@
     <string name="map_search_button_text">Search</string>
 
     <string name="cancel_navigation_button_text">Cancel</string>
-    <string name="neutral_navigation_button_text">Huh?</string>
+    <string name="neutral_navigation_button_text">Delete</string>
     <string name="positive_navigation_button_text">Yes</string>
     <string name="negative_navigation_button_text">No</string>
+
+    //Map select strings
+    <string name="map_select_screen_text">Map Select</string>
+    <string name="load_map_text">Load Map</string>
 
     //Message strings
     <string name="download_complete_message">Download Complete</string>
@@ -19,6 +23,8 @@
     <string name="map_needs_name_message">This Map Needs A Name Dude</string>
     <string name="create_map_name_message">Create-A-Map</string>
     <string name="create_map_dialog_message">Select Yes To Create A Map From Your Current View</string>
+    <string name="user_location_permission_explanation">Allow App To Use Your Location</string>
+    <string name="user_location_permission_not_granted">Location Access Denied</string>>
 
     //Utility strings
     <string name="default_region_name">Name Not Found</string>
