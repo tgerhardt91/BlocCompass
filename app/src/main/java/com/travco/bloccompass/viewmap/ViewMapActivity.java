@@ -3,11 +3,8 @@ package com.travco.bloccompass.viewmap;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.mapbox.android.core.permissions.PermissionsListener;
@@ -27,14 +24,12 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.offline.OfflineManager;
 import com.mapbox.mapboxsdk.offline.OfflineRegion;
 
-import com.travco.bloccompass.home.HomeActivity;
 import com.travco.bloccompass.timberTrees.NotLoggingTree;
 
 import timber.log.Timber;
 
 import com.travco.bloccompass.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ViewMapActivity extends AppCompatActivity implements PermissionsListener {
@@ -62,9 +57,9 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
         plantTreesForLogging();
 
         //ToDo:Not sure if I need to do this again here
-        Mapbox.getInstance(this, getString(R.string.mapbox_api_key));
+        //Mapbox.getInstance(this, getString(R.string.mapbox_api_key));
 
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_viewmap);
 
         setupMapView(savedInstanceState);
     }
