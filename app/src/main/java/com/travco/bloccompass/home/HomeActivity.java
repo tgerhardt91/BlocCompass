@@ -94,43 +94,43 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         Mapbox.getInstance(this, getString(R.string.mapbox_api_key));
 
         // This contains the MapView in XML and needs to be called after the access token is configured.
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         // Set up the MapView
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(new OnMapReadyCallback() {
+        mapView.getMapAsync(mapboxMap -> {
+            map = mapboxMap;
+            mapboxMap.setStyle(Style.SATELLITE, new Style.OnStyleLoaded() {
+                @Override
+                public void onStyleLoaded(@NonNull Style style) {
 
-            @Override
-            public void onMapReady(@NonNull MapboxMap mapboxMap) {
-                map = mapboxMap;
-                mapboxMap.setStyle(Style.SATELLITE, new Style.OnStyleLoaded() {
-                    @Override
-                    public void onStyleLoaded(@NonNull Style style) {
+                    enableLocationComponent(style);
 
-                        enableLocationComponent(style);
+                    initSearchFab();
 
-                        initSearchFab();
+                    // Assign progressBar for later use
+                    progressBar = findViewById(R.id.progress_bar);
 
-                        // Assign progressBar for later use
-                        progressBar = findViewById(R.id.progress_bar);
+                    // Set up the offlineManager
+                    offlineManager = OfflineManager.getInstance(HomeActivity.this);
 
-                        // Set up the offlineManager
-                        offlineManager = OfflineManager.getInstance(HomeActivity.this);
+                    // Bottom navigation bar button clicks are handled here.
+                    // Download offline button
+                    downloadButton = findViewById(R.id.download_button);
+                    downloadButton.setOnClickListener(view -> downloadRegionDialog());
 
-                        // Bottom navigation bar button clicks are handled here.
-                        // Download offline button
-                        downloadButton = findViewById(R.id.download_button);
-                        downloadButton.setOnClickListener(view -> downloadRegionDialog());
-
-                        // List offline regions
-                        listButton =  findViewById(R.id.list_button);
-                        listButton.setOnClickListener(view -> downloadedRegionList());
-                    }
-                });
-            }
+                    // List offline regions
+                    listButton =  findViewById(R.id.list_button);
+                    listButton.setOnClickListener(view -> downloadedRegionList());
+                }
+            });
         });
     }
+
+    //-------------------------------//
+    // Starts Mapbox PlaceAutocomplete activity
+    //-------------------------------//
 
     private void initSearchFab() {
         findViewById(R.id.fab_location_search).setOnClickListener(new View.OnClickListener() {
@@ -147,6 +147,8 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
+
+    //Fires after PlaceAutocomplete activity completes and updates camera position to selected location
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -352,6 +354,10 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .setPositiveButton(getString(R.string.load_map_text), (dialog13, id) -> {
 
                             Toast.makeText(HomeActivity.this, items[regionSelected], Toast.LENGTH_LONG).show();
+
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("REGION_SELECTION", regionSelected);
+                            intent.putExtras(bundle);
 
                             // Get the region bounds and zoom
                             LatLngBounds bounds = (offlineRegions[regionSelected].getDefinition()).getBounds();

@@ -25,6 +25,7 @@
     <string name="create_map_dialog_message">Select Yes To Create A Map From Your Current View</string>
     <string name="user_location_permission_explanation">Allow App To Use Your Location</string>
     <string name="user_location_permission_not_granted">Location Access Denied</string>>
+    <string name="region_load_failed">Could Not Load Selected Region</string>>
 
     //Utility strings
     <string name="default_region_name">Name Not Found</string>
