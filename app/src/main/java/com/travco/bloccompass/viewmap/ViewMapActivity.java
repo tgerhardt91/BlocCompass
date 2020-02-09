@@ -48,9 +48,6 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
 
     public ViewMapActivity()
     {
-        Intent intent = getIntent();
-        extras = intent.getExtras();
-
         offlineManager = OfflineManager.getInstance(ViewMapActivity.this);
     }
 
@@ -59,16 +56,17 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent intent = getIntent();
+        extras = intent.getExtras();
+
         plantTreesForLogging();
 
         //ToDo:Not sure if I need to do this again here
-        //Mapbox.getInstance(this, getString(R.string.mapbox_api_key));
+        Mapbox.getInstance(this, getString(R.string.mapbox_api_key));
 
         setContentView(R.layout.activity_home);
 
         setupMapView(savedInstanceState);
-
-        MoveCameraToSelectedOfflineRegion();
     }
 
     private void setupMapView(Bundle savedInstanceState)
@@ -79,7 +77,10 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
             map = mapboxMap;
             mapboxMap.setStyle(
                     Style.SATELLITE,
-                    style -> enableLocationComponent(style)
+                    style -> {
+                        enableLocationComponent(style);
+                        MoveCameraToSelectedOfflineRegion();
+                    }
             );
         });
     }

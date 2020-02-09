@@ -13,11 +13,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cae35dcc-0536-4072-a82b-cbcff81793c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/viewmap/ViewMapActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/viewmap/ViewMapActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +35,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_25" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="9C2AY1LWLP" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -41,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5561">
-              <caret line="79" column="39" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="39" />
+            <state relative-caret-position="190">
+              <caret line="104" column="53" lean-forward="true" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3363#3397#0" expanded="true" />
@@ -60,14 +67,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/viewmap/ViewMapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="190">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1831#1832#0" expanded="true" />
+                <element signature="e#2148#2182#0" expanded="true" />
                 <element signature="e#3126#3161#0" expanded="true" />
-                <element signature="e#3935#3973#0" expanded="true" />
-                <element signature="e#4283#4284#0" expanded="true" />
-                <element signature="e#4410#4411#0" expanded="true" />
+                <element signature="e#3993#4031#0" expanded="true" />
+                <element signature="e#4328#4329#0" expanded="true" />
+                <element signature="e#4455#4456#0" expanded="true" />
                 <element signature="e#5675#5720#0" expanded="true" />
                 <element signature="e#5964#6009#0" expanded="true" />
               </folding>
@@ -76,25 +86,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/maps/OnMapReadyCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="340">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/camera/CameraUpdateFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-core/1.3.0/fedf0bbf6c173a2989d8f460e768baccfaf036f9/mapbox-android-core-1.3.0-sources.jar!/com/mapbox/android/core/permissions/PermissionsManager.java">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/offline/OfflineRegion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <caret line="265" selection-start-line="265" selection-end-line="265" />
+              <folding>
+                <element signature="e#7655#7656#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="7826" selection-start-line="7826" selection-end-line="7826" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.0.2/e38e7c85994112b70d4548176128c72b8477c110/appcompat-1.0.2-sources.jar!/androidx/appcompat/app/AppCompatActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -112,8 +146,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+            <state relative-caret-position="476">
+              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -142,6 +176,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>r.Id</find>
+      <find>CameraUpdate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,13 +203,14 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/location_marker.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/mapUtility/UserLocationPopulator.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/MapboxUtilities/UserLocationPopulator.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/MapboxUtilities/UserLocationUtility.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/mapboxMapUtlities/UserLocationUtility.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/view_map.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/viewmap/ViewMapActivity.java" />
       </list>
     </option>
@@ -260,9 +296,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="9C2AY1LWLP" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-06T20:43:56.195Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-09T21:16:41.583Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Android_Projects/quiktrak_ian" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -370,7 +407,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18390192" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18390192" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -381,7 +418,7 @@
       <window_info anchor="bottom" id="Run" order="0" weight="0.32936078" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010661" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="6" />
@@ -396,18 +433,6 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Assistant" order="6" weight="0.32995737" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java</url>
-          <line>471</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/list_vector.xml">
@@ -466,17 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
-          <folding>
-            <element signature="e#3664#3696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/location_marker.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -488,14 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="539" selection-start-line="539" selection-end-line="539" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -520,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/mapboxMapUtlities/UserLocationUtility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -544,17 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -562,10 +550,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_viewmap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.0.2/e38e7c85994112b70d4548176128c72b8477c110/appcompat-1.0.2-sources.jar!/androidx/appcompat/app/AppCompatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="7826" selection-start-line="7826" selection-end-line="7826" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/offline/OfflineRegion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+          <folding>
+            <element signature="e#7655#7656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/camera/CameraUpdateFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mapbox.mapboxsdk/mapbox-android-sdk/8.6.2/446e3820bc4b23eb772a2e4997654702ae959c79/mapbox-android-sdk-8.6.2-sources.jar!/com/mapbox/mapboxsdk/maps/OnMapReadyCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/home/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5561">
-          <caret line="79" column="39" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="39" />
+        <state relative-caret-position="190">
+          <caret line="104" column="53" lean-forward="true" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3363#3397#0" expanded="true" />
@@ -581,14 +645,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/travco/bloccompass/viewmap/ViewMapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="190">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1831#1832#0" expanded="true" />
+            <element signature="e#2148#2182#0" expanded="true" />
             <element signature="e#3126#3161#0" expanded="true" />
-            <element signature="e#3935#3973#0" expanded="true" />
-            <element signature="e#4283#4284#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
+            <element signature="e#3993#4031#0" expanded="true" />
+            <element signature="e#4328#4329#0" expanded="true" />
+            <element signature="e#4455#4456#0" expanded="true" />
             <element signature="e#5675#5720#0" expanded="true" />
             <element signature="e#5964#6009#0" expanded="true" />
           </folding>

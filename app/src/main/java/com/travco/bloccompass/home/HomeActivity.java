@@ -55,6 +55,7 @@ import java.util.List;
 import timber.log.Timber;
 
 import com.travco.bloccompass.R;
+import com.travco.bloccompass.viewmap.ViewMapActivity;
 
 public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback, PermissionsListener {
 
@@ -101,29 +102,26 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(mapboxMap -> {
             map = mapboxMap;
-            mapboxMap.setStyle(Style.SATELLITE, new Style.OnStyleLoaded() {
-                @Override
-                public void onStyleLoaded(@NonNull Style style) {
+            mapboxMap.setStyle(Style.SATELLITE, style -> {
 
-                    enableLocationComponent(style);
+                enableLocationComponent(style);
 
-                    initSearchFab();
+                initSearchFab();
 
-                    // Assign progressBar for later use
-                    progressBar = findViewById(R.id.progress_bar);
+                // Assign progressBar for later use
+                progressBar = findViewById(R.id.progress_bar);
 
-                    // Set up the offlineManager
-                    offlineManager = OfflineManager.getInstance(HomeActivity.this);
+                // Set up the offlineManager
+                offlineManager = OfflineManager.getInstance(HomeActivity.this);
 
-                    // Bottom navigation bar button clicks are handled here.
-                    // Download offline button
-                    downloadButton = findViewById(R.id.download_button);
-                    downloadButton.setOnClickListener(view -> downloadRegionDialog());
+                // Bottom navigation bar button clicks are handled here.
+                // Download offline button
+                downloadButton = findViewById(R.id.download_button);
+                downloadButton.setOnClickListener(view -> downloadRegionDialog());
 
-                    // List offline regions
-                    listButton =  findViewById(R.id.list_button);
-                    listButton.setOnClickListener(view -> downloadedRegionList());
-                }
+                // List offline regions
+                listButton =  findViewById(R.id.list_button);
+                listButton.setOnClickListener(view -> downloadedRegionList());
             });
         });
     }
@@ -356,21 +354,25 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                             Toast.makeText(HomeActivity.this, items[regionSelected], Toast.LENGTH_LONG).show();
 
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("REGION_SELECTION", regionSelected);
+                            bundle.putInt("REGION_SELECTION", regionSelected);
+                            Intent intent = new Intent(HomeActivity.this, ViewMapActivity.class);
                             intent.putExtras(bundle);
 
+                            startActivity(intent);
+
+
                             // Get the region bounds and zoom
-                            LatLngBounds bounds = (offlineRegions[regionSelected].getDefinition()).getBounds();
-                            double regionZoom = (offlineRegions[regionSelected].getDefinition()).getMinZoom();
+                            //LatLngBounds bounds = (offlineRegions[regionSelected].getDefinition()).getBounds();
+                            //double regionZoom = (offlineRegions[regionSelected].getDefinition()).getMinZoom();
 
                             // Create new camera position
-                            CameraPosition cameraPosition = new CameraPosition.Builder()
-                                    .target(bounds.getCenter())
-                                    .zoom(regionZoom)
-                                    .build();
+                            //CameraPosition cameraPosition = new CameraPosition.Builder()
+                                    //.target(bounds.getCenter())
+                                    //.zoom(regionZoom)
+                                    //.build();
 
                             // Move camera to new position
-                            map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                            //map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
                         })
                         .setNeutralButton(getString(R.string.neutral_navigation_button_text), (dialog1, id) -> {
