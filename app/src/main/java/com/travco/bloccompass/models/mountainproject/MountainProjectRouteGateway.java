@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.travco.bloccompass.R;
 import com.travco.bloccompass.api.MountainProjectApiService;
+import com.travco.bloccompass.models.geography.GeoCoordinates;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,23 +17,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MountainProjectRouteGateway{
 
     public Single<List<MountainProjectRoute>> GetMountainProjectRoutes(
-            double lat,
-            double lon,
-            int maxDistance)
+            GeoCoordinates centerOfMap, int maxDistance)
     {
         MountainProjectApiService apiService = GetApiService();
 
-
         return apiService.getMountainProjectRoutes(
-                BuildQueryMap(lat, lon, maxDistance));
+                BuildQueryMap(centerOfMap, maxDistance));
     }
 
 
-    private Map<String, String> BuildQueryMap(double lat, double lon, int maxDistance)
+    private Map<String, String> BuildQueryMap(GeoCoordinates centerOfMap, int maxDistance)
     {
         Map<String, String> data = new HashMap<>();
-        data.put("lat", String.valueOf(lat));
-        data.put("lon", String.valueOf(lon));
+        data.put("lat", String.valueOf(centerOfMap.getLatitude()));
+        data.put("lon", String.valueOf(centerOfMap.getLongitude()));
         data.put("maxDistance", String.valueOf(maxDistance));
         data.put("key", String.valueOf(R.string.mountain_project_api_key));
 
@@ -46,7 +44,7 @@ public class MountainProjectRouteGateway{
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.themoviedb.org/3/")
+                .baseUrl("https://www.mountainproject.com/data/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

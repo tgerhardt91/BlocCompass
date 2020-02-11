@@ -12,4 +12,7 @@ public class MountainProjectSyncRequest {
         this.centerOfMap = centerOfMap;
         this.syncRangeInMiles = syncRangeInMiles;
     }
+
+    public GeoCoordinates getCenterOfMap() { return this.centerOfMap; }
+    public int getSyncRangeInMiles() { return this.syncRangeInMiles; }
 }

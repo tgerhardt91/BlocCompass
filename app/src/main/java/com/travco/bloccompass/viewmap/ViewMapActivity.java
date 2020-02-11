@@ -11,6 +11,7 @@ import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.geometry.LatLngBounds;
 import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
@@ -24,6 +25,10 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.offline.OfflineManager;
 import com.mapbox.mapboxsdk.offline.OfflineRegion;
 
+import com.travco.bloccompass.models.geography.GeoCoordinates;
+import com.travco.bloccompass.models.mountainproject.MountainProjectRouteGateway;
+import com.travco.bloccompass.models.mountainproject.MountainProjectSyncAdapter;
+import com.travco.bloccompass.models.mountainproject.MountainProjectSyncRequest;
 import com.travco.bloccompass.timberTrees.NotLoggingTree;
 
 import timber.log.Timber;
@@ -39,7 +44,7 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
     private MapboxMap map;
     private PermissionsManager permissionsManager;
     private OfflineManager offlineManager;
-    //ToDo: Not sure if this needs to be here: private OfflineRegion offlineRegion;
+    private OfflineRegion offlineRegion;
 
     public ViewMapActivity()
     {
@@ -74,13 +79,13 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
                     Style.SATELLITE,
                     style -> {
                         enableLocationComponent(style);
-                        MoveCameraToSelectedOfflineRegion();
+                        MoveCameraToSelectedOfflineRegionAndSyncMap();
                     }
             );
         });
     }
 
-    private void MoveCameraToSelectedOfflineRegion()
+    private void MoveCameraToSelectedOfflineRegionAndSyncMap()
     {
         int regionSelectionId = getOfflineRegionSelectionId();
 
@@ -93,6 +98,8 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
                 }
 
                 try{
+                    offlineRegion = offlineRegions[regionSelectionId];
+
                     LatLngBounds bounds = (offlineRegions[regionSelectionId].getDefinition()).getBounds();
                     double regionZoom = (offlineRegions[regionSelectionId].getDefinition()).getMinZoom();
 
@@ -102,6 +109,8 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
                             .build();
 
                     map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+                    syncMapWithMountainProject();
                 }
                 catch (Exception ex)
                 {
@@ -116,6 +125,31 @@ public class ViewMapActivity extends AppCompatActivity implements PermissionsLis
                 Timber.e( "Error: %s", error);
             }
         });
+    }
+
+    private void syncMapWithMountainProject()
+    {
+        if(offlineRegion == null)
+            return;
+
+        MountainProjectRouteGateway mountainProjectRouteGateway =
+                new MountainProjectRouteGateway();
+
+        MountainProjectSyncAdapter syncAdapter =
+                new MountainProjectSyncAdapter(mountainProjectRouteGateway);
+
+        MountainProjectSyncRequest syncRequest = new MountainProjectSyncRequest(
+                GetCenterOfMap(), 2
+        );
+
+        syncAdapter.SyncMountainProjectRoutes(syncRequest);
+    }
+
+    private GeoCoordinates GetCenterOfMap()
+    {
+        LatLng center = offlineRegion.getDefinition().getBounds().getCenter();
+
+        return new GeoCoordinates(center.getLatitude(), center.getLongitude());
     }
 
     private int getOfflineRegionSelectionId()
