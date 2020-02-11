@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         app:mapbox_cameraZoom="15.27"
         app:mapbox_cameraZoomMin="10">
-        
+
     </com.mapbox.mapboxsdk.maps.MapView>
 
 </RelativeLayout>

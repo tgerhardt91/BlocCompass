@@ -29,4 +29,7 @@
 
     //Utility strings
     <string name="default_region_name">Name Not Found</string>
+
+    //Api base urls
+    <string name="mountain_project_base_url">https://www.mountainproject.com/data/</string>
 </resources>
